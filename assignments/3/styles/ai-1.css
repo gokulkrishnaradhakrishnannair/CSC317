@@ -1,0 +1,175 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom right, #0f0f1c, #1a1a2e);
+  color: #e0e0e0;
+  font-family: 'Orbitron', sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* === Navigation === */
+nav {
+  background-color: #121212;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+  border-bottom: 2px solid #00ffff;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+/* === Header & Hero === */
+header h1 {
+  font-family: 'Raskhal', cursive;
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+/* === Image Styling === */
+header img {
+  border: 4px solid #ff00ff;
+  box-shadow: 0 0 15px #ff00ff;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* === Section Styling === */
+section {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(18, 18, 18, 0.8);
+  border-left: 4px solid #00ffff;
+  border-radius: 8px;
+}
+
+section h2 {
+  font-family: 'Raskhal', cursive;
+  font-size: 2em;
+  color: #ff00ff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px #ff00ff;
+}
+
+section h3 {
+  font-size: 1.5em;
+  color: #00ffff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #00ffff;
+}
+
+section ul {
+  list-style: square;
+  margin-left: 20px;
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+/* === Projects Section === */
+#projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+#projects li {
+  background-color: #1f1f2e;
+  border: 2px solid #00ffff;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+#projects li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* === Footer === */
+footer {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #121212;
+  border-top: 2px solid #ff00ff;
+}
+
+footer h2, footer h3 {
+  color: #ff00ff;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  text-shadow: 0 0 6px #ff00ff;
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+footer a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease;
+}
+
+footer a:hover {
+  text-shadow: 0 0 5px #00ffff;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  header h1 {
+    font-size: 2.2em;
+  }
+
+  section {
+    padding: 15px;
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" >
+    <title>CSC317Portfolio</title>
+    <!-- Necessary to link the switcher style -->
+    <link id="css-theme" rel="stylesheet" href="styles/styles.css" >
+    <!-- setting viewport from for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  </head>
+
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header>
+      <h1>Abraham Cardenas</h1>
+      <img
+        src="images/IMG_1379.jpg"
+        width="125"
+        height="190"
+        alt="Portrait of Abraham Cardenas"
+      >
+      <p>Computer Science Student at San Francisco State University</p>
+    </header>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am currently pursuing a BS degree in Computer Science at San Francisco
+        State University...
+      </p>
+      <p>My career interests include game development and cybersecurity...</p>
+
+      <h2>Skills</h2>
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>C++</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <p>
+            <strong>Word Ladder Game in C++</strong> – This C++ application
+            implements a word transformation algorithm...
+          </p>
+        </li>
+        <li>
+          <p>
+            <strong>Snake Game in C++</strong> – This C++ project is a
+            console-based implementation of the classic Snake game...
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <footer id="contact">
+      <h2>Contact</h2>
+      <h3>GitHub</h3>
+      <ul>
+        <li>
+          <a href="https://github.com/Acardenas96">github.com/Acardenas96</a>
+        </li>
+      </ul>
+      <h3>LinkedIn</h3>
+      <ul>
+        <li>
+          <a href="https://www.linkedin.com/in/abraham-cardenas"
+            >linkedin.com/in/abraham-cardenas</a
+          >
+        </li>
+      </ul>
+    </footer>
+    <script src="scripts/switcher.js"></script>
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+      <h3>Theme Switcher</h3>
+      <div class="theme-buttons">
+        <button class="theme-button active" data-theme="styles">
+          Hand-Written
+        </button>
+        <button class="theme-button" data-theme="ai-1">AI 1</button>
+        <button class="theme-button" data-theme="ai-2">AI 2</button>
+        <button class="theme-button" data-theme="ai-3">AI 3</button>
+        <button class="theme-button" data-theme="ai-4">AI 4</button>
+        <button class="theme-button" data-theme="ai-3">AI Image</button>
+        <button class="theme-button" data-theme="hybrid">Hybrid</button>
+      </div>
+    </div>
+  </body>
+</html>

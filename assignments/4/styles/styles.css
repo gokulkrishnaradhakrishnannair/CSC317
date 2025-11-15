@@ -1,0 +1,237 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+/* root from lecture practice css 3 example */
+:root {
+  --heading-height: 30em;
+  /* Color palette  from csc317 notes */
+  --primary-color: #ce6a85;
+  --secondary-color: #ff6600;
+  --text-color: #333333;
+  --light-text-color: #666666;
+  --bg-color: #ffffff;
+  --light-bg-color: #f5f5f5;
+  --dark-bg-color: #333333;
+
+  /* Spacing */ 
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+
+  /* Border radius */
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 10px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+/* Abraham */
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+/* Abraham */
+header {
+  position: relative;
+  width: 100%;
+}
+header img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* Abraham */
+header::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: calc(var(--heading-height) + 10em);
+  z-index: -1;
+  transform: skew(-3.5deg);
+  /* background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(https://images.unsplash.com/photo-1495464101292-552d0b52fe41?auto=format&fit=crop&w=1350&q=80)
+      no-repeat center,
+    linear-gradient(#4e4376, #2b5876); */
+  background-size: cover;
+}
+/* Abraham */
+footer {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  padding: 2.5rem 0 0 4.5rem;
+  text-shadow: 0.022em 0.022em 0.022em #111;
+  color: #000;
+  border-top: 2px solid var(--primary-color);
+}
+
+/* Mario */
+/* Responsive media query to make sure the image is transformed properly */
+@media (max-width: 600px) {
+  header img {
+    width: 150px;
+    height: 150px;
+  }
+  footer {
+    padding: 1.5rem 0 0 2.5rem;
+    font-size: 14px;
+  }
+}
+
+/* Gokul */
+/* Section Styles */
+/* In this section I styled the section element to have a consistent margin, padding, and text color.
+/* I also limited the max-width for better readability on larger screens and centered the sections. */
+section {
+  margin-bottom: var(--spacing-xl);
+  color: var(--text-color);
+  padding: 0 var(--spacing-md);
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+/* About Section Specific Styles */
+#about {
+  background-color: var(--light-bg-color); /* Light background for contrast */
+  margin: var(--spacing-xl) 0;
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+}
+
+/* */
+#about h3 {
+  text-align: center;
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+/* Enhance the consistency with proper line spacing*/
+#about p {
+  text-align: center;
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#about ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Remove bottom border from last list item */
+#about ul li {
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#about ul li:last-child {
+  border-bottom: none;
+}
+
+/* Mario */
+/* from discord */
+/* Theme Switcher Styling */
+/* I modified the switcher that professor sent through discord to be sticky, not block our footer, and to have enough padding and margin  */
+.theme-switcher {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.5rem;
+  position: sticky;
+  z-index: 50; /* bellow navbar */
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+.theme-switcher h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.theme-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.theme-button {
+  padding: 8px 12px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.theme-button:hover {
+  background-color: #e0e0e0;
+}
+
+.theme-button.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
+
+/* Jerome - Nav Bar */
+nav {
+  background-color: var(--primary-color); /* Temp Color */
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  margin-left: -8px; /* Negative margins to combat body padding */
+  margin-right: -8px;
+  margin-top: -8px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: white; /* Also a temp color */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+html {
+  scroll-behavior: smooth;
+}

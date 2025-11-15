@@ -1,0 +1,137 @@
+/* style.css */
+
+/* --- Global Reset & Base Styles --- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #333; /* A dark background for the overall page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #fff; /* Light colored text overall */
+}
+
+/* --- Calculator Container --- */
+.calculator {
+    width: 350px;
+    background-color: #000; /* Main calculator body background */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Display Area --- */
+.display {
+    padding: 20px;
+    text-align: right;
+    background-color: #000;
+    font-size: 4rem;
+    color: #fff;
+    min-height: 100px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    word-break: break-all;
+    line-height: 1.2;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+/* --- Button Grid --- */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* Minimal gap between buttons */
+    padding: 5px; /* Padding around the grid */
+    background-color: #000; /* Ensures gap background is black */
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 50%; /* Makes buttons circular */
+    cursor: pointer;
+    height: 70px;
+    width: 70px;
+    margin: 5px; /* Margin to help with grid spacing and overall circular appearance */
+    transition: background-color 0.2s;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Specific styling for the '0' button to span two columns */
+.btn.zero {
+    grid-column: span 2;
+    width: 150px; /* Approximate width for two buttons + gap */
+    border-radius: 35px; /* Pill shape */
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
+/* --- Button Colors and Styles --- */
+
+/* Dark gray number buttons (0-9) and decimal */
+.btn.number, .btn.decimal {
+    background-color: #333333; /* Dark gray */
+    color: #fff;
+}
+
+.btn.number:hover, .btn.decimal:hover {
+    background-color: #555555;
+}
+
+/* Gray utility buttons (AC, +/-, %) */
+.btn.utility {
+    background-color: #A5A5A5; /* Gray */
+    color: #000;
+}
+
+.btn.utility:hover {
+    background-color: #CFCFCF;
+}
+
+/* Orange operation buttons (+, -, ×, ÷, =) */
+.btn.operator, .btn.equals {
+    background-color: #FF9500; /* Orange */
+    color: #fff;
+}
+
+.btn.operator:hover, .btn.equals:hover {
+    background-color: #FFB74D;
+}
+
+/* Active state for operator buttons when selected */
+.btn.operator.active {
+    background-color: #fff;
+    color: #FF9500;
+}
+
+/* --- Responsiveness (Optional but recommended) --- */
+@media (max-width: 400px) {
+    .calculator {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .btn {
+        height: 60px;
+        width: 60px;
+        font-size: 1.8rem;
+    }
+
+    .btn.zero {
+        width: 130px;
+    }
+
+    .display {
+        font-size: 3.5rem;
+    }
+}

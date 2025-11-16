@@ -25,7 +25,3 @@ Another challenge involved handling the precision of floating-point arithmetic i
 *   **Full Keyboard Support:** The calculator is fully operable using a physical keyboard (numbers, operators, enter/equals, backspace/escape for clear).
 *   **Division by Zero Handling:** Division by zero results in an "Error" message on the display and resets the calculator state to prevent further invalid calculations.
 *   **Responsive Styling:** The CSS utilizes a mobile-first approach and a media query to ensure the calculator looks correct on both desktop views and smaller mobile screens.
-
-## Acknowledgments
-
-The initial HTML, CSS, and general JavaScript structure provided within the assignment prompts were used as the foundational boilerplate for this project.

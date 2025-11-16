@@ -8,7 +8,7 @@
 ## Project Links
 
 *   **GitHub Repository:** https://github.com/gokulkrishnaradhakrishnannair/CSC317/tree/main/assignments/4
-*   **Live GitHub Pages URL:** 
+*   **Live GitHub Pages URL:** https://gokulkrishnaradhakrishnannair.github.io/CSC317/assignments/4
 
 ## Implementation Description
 
